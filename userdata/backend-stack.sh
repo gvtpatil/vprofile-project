@@ -12,7 +12,7 @@ sed -i 's/^127.0.0.1/0.0.0.0/' /etc/my.cnf
 systemctl start mariadb
 systemctl enable mariadb
 
-#restore the dump file for the application
+#restore the dump file for the application.
 cd /tmp/
 wget https://raw.githubusercontent.com/devopshydclub/vprofile-repo/vp-rem/src/main/resources/db_backup.sql
 mysqladmin -u root password "$DATABASE_PASS"
